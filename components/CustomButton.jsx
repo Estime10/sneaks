@@ -10,11 +10,11 @@ function CustomButton({
       onPress={handlePress}
       activeOpacity={0.8}
       className={`bg-gray-300 rounded-xl min-h-[62px] justify-center
-items-center ${containerStyle} ${isLoading ? 'opacity-50' : ''}`}
+      items-center ${containerStyle} ${isLoading ? 'opacity-50' : ''}`}
       disabled={isLoading}
     >
       <Text className={`text-primary font-psemibold tex-xl ${textStyle}
-uppercase text-center font-bold`}
+      uppercase text-center font-bold`}
       >
         {title}
       </Text>
