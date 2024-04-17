@@ -9,9 +9,11 @@ import { getLatestPosts, getPosts, getUsers } from '../../lib/appwrite';
 import useAppwrite from '../../lib/useAppwrite';
 import PostCard from '../../components/PostCard';
 import Users from '../../components/Users';
+import { useGlobalContext } from '../../context/GlobalProvider';
 
 
 function Home() {
+    const { user, setUser, setIsLoggedIn } = useGlobalContext();
   const [refreshing, setRefreshing] = useState(false);
   const { data: posts, refectch } = useAppwrite(getPosts);
   const { data: latestPosts, } = useAppwrite(getLatestPosts);
@@ -38,7 +40,7 @@ function Home() {
                 <Text className="font-pmedium text-sm text-primary mb-3">
                   welcome to sneaker land
                 </Text>
-                <Text className="text-2xl font-psemibold text-primary capitalize">john doe</Text>
+                <Text className="text-2xl font-psemibold text-primary capitalize">{user?.username}</Text>
               </View>
               <View>
                 <Image

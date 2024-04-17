@@ -10,7 +10,7 @@ const Users = ({users}) => {
 		keyExtractor={(item) => item.$id}
 		renderItem={({ item }) => (
 			<View className="flex-row items-center justify-between">
-				<View className="flex-col items-center justify-center py-2">
+				<View className="flex-col items-center justify-center py-2 mr-5">
 					<View className="w-[46px] h-[46px] rounded-lg border 
 				  border-gray-400 justify-center items-center p-0.5">
 					  <Image
@@ -19,7 +19,11 @@ const Users = ({users}) => {
 						  resizeMode="cover"
 					  />
 				  </View>
-					<Text className="font-psemibold text-sm">{item.username}</Text>
+					<Text
+						className="font-psemibold text-xs pt-2 w-14 text-center"
+						numberOfLines={1} ellipsizeMode='tail'>
+						{item.username}
+					</Text>
 				</View>
 			</View>
 		)}
