@@ -14,7 +14,7 @@ function TabIcon({
         className="w-6 h-6"
       />
       <Text
-        className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`}
+        className={`${focused ? 'font-psemibold' : 'font-pregular'} text-sm uppercase`}
         style={{ color }}
       >
         {name}
@@ -28,11 +28,11 @@ function TabsLayout() {
     <Tabs
       screenOptions={{
         tabBarShowLabel: false,
-        tabBarActiveTintColor: '#D5D8DC',
-        tabBarInactiveTintColor: '#ABB2B9',
+        tabBarActiveTintColor: '#CACFD2',
+        tabBarInactiveTintColor: '#99A3A4',
         tabBarStyle: {
           backgroundColor: '#FDFEFE',
-          borderTopWidth: 1,
+          borderTopWidth: 0,
           borderTopColor: '#D5D8DC',
           height: 84,
         },
