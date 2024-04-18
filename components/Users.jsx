@@ -9,7 +9,7 @@ const Users = ({users}) => {
 		data={users}
 		keyExtractor={(item) => item.$id}
 		renderItem={({ item }) => (
-			<View className="flex-row items-center justify-between">
+			<View className="flex-1">
 				<View className="flex-col items-center justify-center py-2 mr-5">
 					<View className="w-[46px] h-[46px] rounded-lg border 
 				  border-gray-400 justify-center items-center p-0.5">

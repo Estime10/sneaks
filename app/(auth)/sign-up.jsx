@@ -43,7 +43,9 @@ function SignUp() {
             className="w-[145px] h-[110px] relative -left-10"
             resizeMode="contain"
           />
-          <Text className="text-lg uppercase text-primary text-semibold font-psemibold">Register into sneaks</Text>
+          <Text className="text-lg uppercase text-primary text-semibold font-psemibold">
+            Register into sneaks
+          </Text>
             
           <FormField
             title="Username"
