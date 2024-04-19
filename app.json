@@ -15,10 +15,10 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true,
-      "package": "com.myself.sneaks"
-    },
+"ios": {
+  "supportsTablet": true,
+  "package": "com.myself.sneaks"
+},
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/logo-small.png",
