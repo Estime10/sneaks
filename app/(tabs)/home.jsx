@@ -15,13 +15,13 @@ import { useGlobalContext } from '../../context/GlobalProvider';
 function Home() {
     const { user, setUser, setIsLoggedIn } = useGlobalContext();
   const [refreshing, setRefreshing] = useState(false);
-  const { data: posts, refectch } = useAppwrite(getPosts);
+  const { data: posts, refetch } = useAppwrite(getPosts);
   const { data: latestPosts, } = useAppwrite(getLatestPosts);
   const { data: users } = useAppwrite(getUsers);
 
   const onRefresh = async () => {
     setRefreshing(true);
-    await refectch();
+    await refetch();
     setRefreshing(false);
   }
 
@@ -50,22 +50,11 @@ function Home() {
                 />
               </View>
             </View>
-            {/* <SearchInput /> */}
-
             <View className="w-full flex-1 pb-4">
               <Users
               users={users ?? []}
               />
             </View>
-
-            {/* <View className="w-full flex-1 pt-2 pb-8">
-              <Text className="text-gray-400 text-lg font-pregular capitalize">
-                popular posts
-              </Text>
-              <Trending
-              posts={latestPosts ?? []}
-              />
-            </View> */}
           </View>
         )}
         ListEmptyComponent={() => (
@@ -74,11 +63,13 @@ function Home() {
             subtitle="no one has posted anything yet."
           />
         )}
-        refreshControl={<RefreshControl
+        refreshControl={
+          <RefreshControl
           refreshing={refreshing}
           onRefresh={onRefresh}
-        />}
-         showsVerticalScrollIndicator={false}
+          />
+        }
+        showsVerticalScrollIndicator={false}
       />
     </SafeAreaView>
   );
